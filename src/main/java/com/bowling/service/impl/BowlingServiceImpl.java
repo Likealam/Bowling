@@ -1,6 +1,6 @@
 package com.bowling.service.impl;
 
-import com.bowling.api.model.ApiConverter;
+import com.bowling.api.model.ScoreboardToApiConverter;
 import com.bowling.api.model.ScoreboardModel;
 import com.bowling.exception.NoGameException;
 import com.bowling.service.BowlingService;
@@ -10,11 +10,11 @@ import java.util.List;
 
 @Service
 public class BowlingServiceImpl implements BowlingService {
-    private final ApiConverter apiConverter;
+    private final ScoreboardToApiConverter scoreboardToApiConverter;
     private ScoreboardHandler scoreboardHandler;
 
-    public BowlingServiceImpl(ApiConverter apiConverter) {
-        this.apiConverter = apiConverter;
+    public BowlingServiceImpl(ScoreboardToApiConverter scoreboardToApiConverter) {
+        this.scoreboardToApiConverter = scoreboardToApiConverter;
     }
 
     @Override
@@ -23,7 +23,7 @@ public class BowlingServiceImpl implements BowlingService {
             throw new NoGameException();
         }
         scoreboardHandler.addRoll(score);
-        return apiConverter.convert(scoreboardHandler);
+        return scoreboardToApiConverter.convert(scoreboardHandler);
     }
 
     @Override
@@ -31,7 +31,7 @@ public class BowlingServiceImpl implements BowlingService {
         if (scoreboardHandler == null) {
             throw new NoGameException();
         }
-        return apiConverter.convert(scoreboardHandler);
+        return scoreboardToApiConverter.convert(scoreboardHandler);
     }
 
     @Override

@@ -9,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Component
-public class ApiConverter {
+public class ScoreboardToApiConverter {
     public ScoreboardModel convert(ScoreboardHandler scoreboardHandler) {
         List<PlayerFrames> playerFramesList = scoreboardHandler.getPlayerFramesList();
         List<PlayerModel> playerModels = new ArrayList<>(playerFramesList.size());
