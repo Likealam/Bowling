@@ -1,10 +1,9 @@
-package com.bowling;
+package com.bowling.service;
 
 import com.bowling.exception.GameAlreadyOverException;
 import com.bowling.exception.IncorrectNameException;
 import com.bowling.exception.IncorrectPinNumberException;
 import com.bowling.exception.NoGameException;
-import com.bowling.service.BowlingService;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @SpringBootTest
-public class BowlingServiceImplTests {
+public class BowlingServiceTests {
     @Autowired
     private BowlingService bowlingService;
 
