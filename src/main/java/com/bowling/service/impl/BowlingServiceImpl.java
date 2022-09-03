@@ -1,6 +1,6 @@
 package com.bowling.service.impl;
 
-import com.bowling.api.model.ScoreboardToApiConverter;
+import com.bowling.api.converter.ScoreboardToApiConverter;
 import com.bowling.api.model.ScoreboardModel;
 import com.bowling.exception.NoGameException;
 import com.bowling.service.BowlingService;

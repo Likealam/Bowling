@@ -1,5 +1,8 @@
-package com.bowling.api.model;
+package com.bowling.api.converter;
 
+import com.bowling.api.model.FrameModel;
+import com.bowling.api.model.PlayerModel;
+import com.bowling.api.model.ScoreboardModel;
 import com.bowling.service.impl.Frame;
 import com.bowling.service.impl.PlayerFrames;
 import com.bowling.service.impl.ScoreboardHandler;
