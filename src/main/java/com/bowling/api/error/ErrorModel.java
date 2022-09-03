@@ -9,11 +9,11 @@ public enum ErrorModel {
     INCORRECT_PIN_NUMBER(2, "Entered pin number is incorrect!"),
     GAME_ALREADY_OVER(3, "Game is already over!");
     private final Integer code;
-    private final String Message;
+    private final String message;
 
     ErrorModel(Integer code, String message) {
         this.code = code;
-        Message = message;
+        this.message = message;
     }
 
     public Integer getCode() {
@@ -21,6 +21,6 @@ public enum ErrorModel {
     }
 
     public String getMessage() {
-        return Message;
+        return message;
     }
 }
